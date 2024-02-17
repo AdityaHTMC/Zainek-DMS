@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.css-p55zm9-MuiButtonBase-root-MuiIconButton-root{background:#039d9c!important}
+@media (min-width: 600px) {
+    /* .css-2dum1v-MuiDrawer-docked .MuiDrawer-paper{width:calc(48px + 1px)!important;}
+    .css-2dum1v-MuiDrawer-docked{width:calc(48px + 1px)!important;} */
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root .MuiListItemIcon-root{padding-left:3px;min-width:50px!important;}
+.sidebarManuBx{margin:0px!important;border-radius:0px!important; box-shadow: none!important;margin:0px !important;}
+.sidebarManuBx .sidebarManuUl{padding-top:0px!important;padding-bottom:0px!important;border-radius:0px;box-shadow:none;margin:0px !important;padding:0px !important;}
+.sidebarManuBx ul{padding-top:0px!important;padding-bottom:0px!important;}
+.sidebarManuBx ul a{border-bottom:1px solid #f3f3f3;display:block;color:rgba(0, 0, 0, 0.87);}
+.sidebarManuBx .sidebarManuUl li {border-bottom:1px solid #f3f3f3;}
+.sidebarManuBx .sidebarManuUl li:last-child{border-radius:0px!important;border-bottom:none; margin:0px !important; padding:0px !important;}
+.sidebarManuUl:hover{background:#00c2c1!important;padding:0px!important;margin:0px!important;border-radius:4px!important;color:#fff!important;font-weight:900;}
+.css-h4y409-MuiList-root{padding-top:0px!important;padding-bottom:0px!important;}

@@ -1,0 +1,55 @@
+.dayFilter {
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(248, 249, 250);
+    border-radius: 0.75rem;
+    min-height: unset;
+    padding: 0.5rem 1rem;
+    max-width: fit-content;
+}
+
+.activeFilter {
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-width: 0px;
+    overflow-wrap: break-word;
+    background-color: #00c2c1;
+    color: #fff;
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
+    overflow: visible;
+    position: relative;
+    padding: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.inactive{
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    display: flex;
+    flex-direction: column;
+    min-width: 0px;
+    overflow-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
+    overflow: visible;
+    position: relative;
+    /* margin-left: 24px;
+    margin-right: 24px; */
+    padding: 8px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    cursor: pointer;
+}
