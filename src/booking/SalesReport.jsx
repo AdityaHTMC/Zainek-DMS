@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Paper from "@mui/material/Paper";
@@ -16,8 +16,29 @@ import Grid from '@mui/material/Grid';
 import SearchIcon from '@mui/icons-material/Search';
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import { Link } from "react-router-dom";
+import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+
+import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 
 const SalesReport = () => {
+ 
+  const [startDate, setStartDate] = useState(null); // Add startDate state
+  const [endDate, setEndDate] = useState(null);
+
+
+  const handleDateChange = (newDates) => {
+    const [start, end] = newDates;
+    const formattedStartDate = start?.toISOString().split("T")[0];
+    const formattedEndDate = end?.toISOString().split("T")[0];
+    setStartDate(start);
+    setEndDate(end);
+    console.log("Selected date range:", formattedStartDate, formattedEndDate);
+  };
+
+
+
   return (
     <>
       {/*********** body area start here ************/}
@@ -30,12 +51,18 @@ const SalesReport = () => {
 
           {/* Filter part start */}
           <h4 className="mt15 mb15">Report Selection Criteria</h4>
-          <Grid className="mb20" container spacing={4}>
-            <Grid item xs={3}>
-              <TextField className='width100' size="small" label="From Date" />
-            </Grid>
-            <Grid item xs={3}>
-              <TextField className='width100' size="small" label="To Date" />
+          <Grid className="mb20" container spacing={4} alignItems='center' >
+          <Grid item md={4}>
+              <div>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DemoContainer components={["DateRangePicker"]}>
+                    <DateRangePicker
+                      onChange={handleDateChange} // Add onChange function
+                      localeText={{ start: "start-date", end: "end-date" }}
+                    />
+                  </DemoContainer>
+                </LocalizationProvider>
+              </div>
             </Grid>
             <Grid item xs={3}>
               <TextField className='width100' size="small" label="Dealer Name" />
@@ -60,62 +87,6 @@ const SalesReport = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                    <TableCell>text</TableCell>
-                  </TableRow>
                   <TableRow>
                     <TableCell>text</TableCell>
                     <TableCell>text</TableCell>
